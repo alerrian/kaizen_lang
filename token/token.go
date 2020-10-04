@@ -1,6 +1,6 @@
 package token
 
-type Type string
+type TokenType string
 
 const (
 	// Special Types
@@ -12,26 +12,26 @@ const (
 	INT   = "INT"
 
 	// Operators
-	ASSIGN    = '='
-	PLUS      = '+'
-	MINUS     = '-'
-	BANG      = '!'
-	ASTERISK  = '*'
-	SLASH     = '/'
-	LESSTHAN  = '<'
-	GRTRTHAN  = '>'
+	ASSIGN    = "="
+	PLUS      = "+"
+	MINUS     = "-"
+	BANG      = "!"
+	ASTERISK  = "*"
+	SLASH     = "/"
+	LESSTHAN  = "<"
+	GRTRTHAN  = ">"
 	EQUAL     = "=="
 	NOT_EQUAL = "!="
 
 	// Delimiters
-	COMMA     = ','
-	SEMICOLON = ';'
-	LPAREN    = '('
-	RPAREN    = ')'
-	LCURL     = '{'
-	RCURL     = '}'
-	LBRACK    = '['
-	RBRACK    = ']'
+	COMMA     = ","
+	SEMICOLON = ";"
+	LPAREN    = "("
+	RPAREN    = ")"
+	LCURL     = "{"
+	RCURL     = "}"
+	LBRACK    = "["
+	RBRACK    = "]"
 
 	// Keywords
 	FUNCTION = "DEF"
@@ -44,7 +44,6 @@ const (
 )
 
 type Token struct {
-	Type    Type
+	Type    TokenType
 	Literal string
 }
-
